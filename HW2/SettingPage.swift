@@ -9,7 +9,25 @@ import SwiftUI
 
 struct SettingPage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ScrollView(.vertical){
+                let columns = [GridItem()]
+                LazyVGrid(columns: columns){
+                    Button(action:{ UIApplication.shared.setAlternateIconName(nil)}){
+                        Image("PLG_Logo")
+                            .resizable()
+                            .scaledToFill()
+                    }
+                    Button(action:{ UIApplication.shared.setAlternateIconName("PinkIcon")}){
+                        Image("PLG_Pink")
+                            .resizable()
+                            .scaledToFill()
+                    }
+                }
+                .frame(width: 250)
+            }
+            .navigationTitle("Setting")
+        }
     }
 }
 

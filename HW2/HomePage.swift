@@ -36,6 +36,46 @@ struct HomePage: View {
             }
             .tabViewStyle(.page)
             .frame(height: 250)
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
+            Group{
+                Text("關於聯盟")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
+                Text("秉持紮根這片土地的初心，盡心傾聽球迷聲音")
+                    .multilineTextAlignment(.leading)
+                Text("以健全架構與制度，持續推動籃球發展")
+                    .multilineTextAlignment(.leading)
+                Text("以成熟的職業化體制為目標，深耕在地籃球")
+                    .multilineTextAlignment(.leading)
+                Text("發揮體育產業火車頭效應")
+                    .multilineTextAlignment(.leading)
+                Text("以最精緻、最能與球迷互動的核心宗旨立足臺灣")
+                    .multilineTextAlignment(.leading)
+                Text("在亞洲籃壇發揮影響力")
+                    .multilineTextAlignment(.leading)
+            }
+            HStack{
+                Link(destination: URL(string: "https://www.facebook.com/PLEAGUE.official/")!, label: {
+                    Image("FB")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100, height: 100)
+                })
+                Link(destination: URL(string: "https://www.instagram.com/p.league.official/")!, label: {
+                    Image("IG")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100, height: 100)
+                })
+                Link(destination: URL(string: "https://www.youtube.com/channel/UCBGpG-uiIlxb348HZrEprEA")!, label: {
+                    Image("YT")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100, height: 100)
+                })
+            }
+            
             Spacer()
         }
     }
